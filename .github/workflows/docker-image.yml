@@ -13,7 +13,7 @@ jobs:
     - name: Clean up Docker to free space
       run: docker system prune -a --volumes -f
     - name: Build the Docker image
-      run: docker build . --file ./sentinel-dashboard/Dockerfile --tag pengliuah/sentinel:v1.8.8
+      run: docker build . --file ../../sentinel-dashboard/Dockerfile --tag pengliuah/sentinel:v1.8.8
     - name: Save the Docker image
       run: docker save pengliuah/sentinel:v1.8.8 -o "pengliuah/sentinel:v1.8.8-amd64.tar"
       
