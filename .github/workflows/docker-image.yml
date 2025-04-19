@@ -17,7 +17,7 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file ./sentinel-dashboard/Dockerfile --tag pengliuah/sentinel:v1.8.8
     - name: Save the Docker image
-      run: docker save pengliuah/sentinel:v1.8.8 -o "pengliuah/sentinel:v1.8.8-amd64.tar"
+      run: docker save pengliuah/sentinel:v1.8.8 -o "sentinel:v1.8.8-amd64.tar"
       
     - name: Compress the TAR files
       run: tar -czf x86-64-images.tar.gz *-amd64.tar
